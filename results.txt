@@ -1,0 +1,81 @@
+================================================================================================================
+Freezer, fish held at -18 °C (frozen fish trade)  |  PCM: salt-water eutectic (23 wt% NaCl), melts at -21.2 °C
+================================================================================================================
+Cooling load 1.16 kWh/day (48 W average): walls and lid 0.99, restocking 0.17
+Storage needed: nightly 0.82 kWh (no sun for 17 h), cloudy-day reserve 3.48 kWh (3 days)
+Refreezing the PCM needs an evaporator at -26.2 °C, 1.2 K below normal: COP 1.00 -> 0.97
+
+  DESIGNS                                   battery    PCM              solar     compressor  costs
+  Battery only                                5.0 kWh      0 kg (  0 L)    610 W PV    58 W comp  upfront   1.79M  10-yr   1.96M  N991/day
+  PCM for nights, battery for cloudy days     4.1 kWh     15 kg ( 15 L)    597 W PV   213 W comp  upfront   2.27M  10-yr   2.47M  N1,249/day
+  Battery for nights, PCM for cloudy days     1.0 kWh     62 kg ( 63 L)    596 W PV   222 W comp  upfront   1.95M  10-yr   2.11M  N1,066/day
+  PCM only (direct drive)                     0.3 kWh     76 kg ( 78 L)    583 W PV   373 W comp  upfront   2.49M  10-yr   2.69M  N1,358/day
+  Cheapest mix (PCM: 0% night, 0% cloudy)     5.0 kWh      0 kg (  0 L)    610 W PV    58 W comp  upfront   1.79M  10-yr   1.96M  N991/day
+
+  Where the 10-year cost goes (present value, N millions)
+                                                freezer       solar     battery         PCM     cabinet  compressor      upkeep
+  Battery only                                     0.65        0.30        0.93        0.00        0.00        0.00        0.08
+  PCM for nights, battery for cloudy days          0.65        0.30        0.75        0.02        0.03        0.59        0.13
+  Battery for nights, PCM for cloudy days          0.65        0.30        0.18        0.08        0.13        0.63        0.15
+  PCM only (direct drive)                          0.65        0.29        0.06        0.10        0.16        1.23        0.20
+
+  SUPERCOOLING: what your lab problem costs here (design: battery for nights, PCM for cloudy days)
+     0 K: evaporator -24.2 °C, COP 1.00, compressor 207 W, 10-yr 2.05M, N1,033/day
+     2 K: evaporator -26.2 °C, COP 0.97, compressor 222 W, 10-yr 2.11M, N1,066/day
+     4 K: evaporator -28.2 °C, COP 0.93, compressor 251 W, 10-yr 2.24M, N1,132/day
+     6 K: evaporator would need -30 °C, below the compressor's -30 °C limit -> PCM cannot refreeze
+     8 K: evaporator would need -32 °C, below the compressor's -30 °C limit -> PCM cannot refreeze
+    10 K: evaporator would need -34 °C, below the compressor's -30 °C limit -> PCM cannot refreeze
+    13 K: evaporator would need -37 °C, below the compressor's -30 °C limit -> PCM cannot refreeze
+
+================================================================================================================
+Chiller, fish held at +3 °C on 'ice' (fresh fish)  |  PCM: water ice, melts at 0.0 °C
+================================================================================================================
+Cooling load 0.81 kWh/day (34 W average): walls and lid 0.56, restocking 0.25
+Storage needed: nightly 0.57 kWh (no sun for 17 h), cloudy-day reserve 2.42 kWh (3 days)
+Refreezing the PCM needs an evaporator at -6.0 °C, 1.0 K below normal: COP 1.80 -> 1.76
+
+  DESIGNS                                   battery    PCM              solar     compressor  costs
+  Battery only                                1.9 kWh      0 kg (  0 L)    236 W PV    40 W comp  upfront   1.16M  10-yr   1.27M  N641/day
+  PCM for nights, battery for cloudy days     1.6 kWh      7 kg (  8 L)    230 W PV   146 W comp  upfront   1.31M  10-yr   1.42M  N719/day
+  Battery for nights, PCM for cloudy days     0.4 kWh     29 kg ( 35 L)    230 W PV   152 W comp  upfront   1.21M  10-yr   1.31M  N662/day
+  PCM only (direct drive)                     0.3 kWh     36 kg ( 43 L)    224 W PV   256 W comp  upfront   1.64M  10-yr   1.77M  N894/day
+  Cheapest mix (PCM: 0% night, 50% cloudy)    1.2 kWh     14 kg ( 17 L)    233 W PV    98 W comp  upfront   1.08M  10-yr   1.18M  N594/day
+
+  Where the 10-year cost goes (present value, N millions)
+                                                freezer       solar     battery         PCM     cabinet  compressor      upkeep
+  Battery only                                     0.65        0.19        0.36        0.00        0.00        0.00        0.07
+  PCM for nights, battery for cloudy days          0.65        0.19        0.29        0.01        0.02        0.19        0.09
+  Battery for nights, PCM for cloudy days          0.65        0.19        0.07        0.03        0.07        0.21        0.09
+  PCM only (direct drive)                          0.65        0.19        0.06        0.04        0.09        0.62        0.13
+
+  SUPERCOOLING: what your lab problem costs here (design: battery for nights, PCM for cloudy days)
+     0 K: evaporator  -3.0 °C, COP 1.80, compressor 144 W, 10-yr 1.27M, N644/day
+     2 K: evaporator  -5.0 °C, COP 1.80, compressor 144 W, 10-yr 1.27M, N644/day
+     4 K: evaporator  -7.0 °C, COP 1.72, compressor 162 W, 10-yr 1.35M, N683/day
+     6 K: evaporator  -9.0 °C, COP 1.63, compressor 185 W, 10-yr 1.45M, N734/day
+     8 K: evaporator -11.0 °C, COP 1.55, compressor 215 W, 10-yr 1.59M, N801/day
+    10 K: evaporator -13.0 °C, COP 1.47, compressor 257 W, 10-yr 1.77M, N894/day
+    13 K: evaporator -16.0 °C, COP 1.34, compressor 365 W, 10-yr 2.24M, N1,131/day
+
+================================================================================================================
+SENSITIVITY (freezer): cheapest mix and its cost per day, one input changed at a time
+================================================================================================================
+  Base case                                      PCM 0% night / 0% cloudy   N991/day
+  Battery price N100k / N300k per kWh                    PCM 0%/0% N815  |      PCM 0%/100% N1,144
+  Compressor capacity N2,000 / N8,000 per W            PCM 0%/100% N894  |          PCM 0%/0% N991
+  PCM material N150 / N1,500 per kg                      PCM 0%/0% N991  |          PCM 0%/0% N991
+  Cloudy-day reserve 1 / 5 days                         PCM 0%/10% N705  |        PCM 0%/0% N1,273
+  Rainy-season yield 3.5 / 5.3 kWh/kWp/day             PCM 0%/0% N1,019  |          PCM 0%/0% N975
+  Battery life 4 / 12 years                          PCM 0%/100% N1,119  |          PCM 0%/0% N908
+  Discount rate 6% / 20%                                 PCM 0%/0% N747  |        PCM 0%/0% N1,257
+  Sun hours for the compressor 5 / 9                   PCM 0%/0% N1,002  |         PCM 0%/10% N974
+  Days to rebuild the reserve 2 / 8                    PCM 0%/0% N1,035  |        PCM 0%/100% N871
+
+================================================================================================================
+BENCHMARK: AC chest freezer on a petrol generator 8 h/day: N4,606/day all-in (fuel and upkeep alone N4,183/day)
+Cheapest solar freezer: N991/day, about 4.6x cheaper over 10 years
+
+CAN A TRADER AFFORD THE UPFRONT COST? (cheapest solar freezer, paid off over 24 months)
+  Commercial bank rate 31%/yr    N100,939/month   vs generator fuel and upkeep N127,233/month
+  Concessional 14%/yr            N85,885/month   vs generator fuel and upkeep N127,233/month
